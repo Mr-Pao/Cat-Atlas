@@ -1,0 +1,121 @@
+<!--index.wxml-->
+
+<!--首页图片-->
+<navigator url="/pages/about/about" style= "width: 100%;background-color:#FBDB6C">
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="/pages/images/huihui.png" style= "width: 80%">
+  </image>
+</view>
+</navigator>
+
+<!--搜索框-->
+<van-sticky >
+  <van-search
+  value="{{ value }}"
+  shape="round"
+  background="#FBDB6C"
+  placeholder="请输入猫咪名字"
+  bind:change="onChange"
+  bind:search="onSearch"
+/>
+</van-sticky>
+
+<!--列表-->
+<view hidden="{{currentTab!==0}}">
+
+<text> \n </text>
+
+<navigator url="/pages/index/狸花/狸花" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/6.png" mode='aspectFill' ></image>
+    <view class= "cat-name">狸花</view>
+  </view>
+</navigator>
+<view class="divLine"></view>
+
+<navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/4.png" mode='aspectFill' ></image>
+    <view class="cat-name">三花</view> 
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/3.png" mode='aspectFill' ></image>
+    <view class= "cat-name">大橘</view>
+  </view>
+</navigator>
+<view class="divLine"> </view>
+
+<navigator url="/pages/index/纯色/纯色" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/5.png" mode='aspectFill' ></image>
+    <view class= "cat-name">纯色</view>
+  </view>
+</navigator>
+<view class="divLine"></view>
+
+<navigator url="/pages/index/奶牛/奶牛" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/2.png" mode='aspectFill' ></image>
+    <view class= "cat-name">奶牛</view>
+  </view>
+</navigator>
+<view class="divLine"></view>
+
+<navigator url="/pages/index/其它/其它" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/1.png" mode='aspectFill' ></image>
+    <view class= "cat-name">其它</view>
+  </view>
+</navigator>
+<view class="divLine"></view>
+
+<navigator url="/pages/index/所有/所有" >
+  <view class="catitem" style="width: 750rpx; height: 200rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <image class='avator ' src="/pages/images/huihui.png" mode='aspectFill'></image>
+    <view class="cat-name">所有</view>
+  </view>
+</navigator>
+<view class="divLine"></view>
+
+<!-- 毕业 -->
+<text> \n </text>
+<view hidden="{{currentTab!==1}}">
+  <block wx:for="{{fostered_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+  <view class="divLine"></view>
+</block>
+</view>
+
+</view>
+
+<!--科普-->
+<text> \n </text>
+<view class = "body">若您在院内偶遇流浪猫，<text class = "bodybold">切记</text>
+</view>
+<view class = "body">🚫<text class = "bodybold">巧克力、葡萄制品、大葱、洋葱</text>等食品对猫<text class = "bodybold">有毒</text>，可能会引起急性肾衰竭，切<text class = "bodybold">不可以</text>喂食！
+</view>
+<view class = "body">🚫<text class = "bodybold">火腿肠</text>和<text class = "bodybold">牛奶</text>也并<text class = "bodybold">不适合</text>猫咪，会引起肠胃反应，造成腹泻等状况。
+</view>
+<view class = "body">🚫酸性的各类水果、香辛料制的肉类、乌贼等海产也<text class = "bodybold">均不适合</text>猫咪食用。
+</view>
+<view class = "body">猫常见的较合适的食物有猫粮、猫罐头、以及其它一些猫咪零食。
+</view>
+
+<!--说明-->
+<view class="body">   </view>
+<view class="staff" bindtap="copyTBL">提供猫咪信息或纠错请联系微信：Pao_Leo (单击可复制)</view>
+<view class="staff">此小程序代码开源，可在GitHub上搜索：北大猫协</view>
+<view class="staff">小程序维护：一只狍</view>
+<text> \n\n\n </text>
+
+<!--底部导航栏-->

@@ -1,0 +1,20 @@
+<!--index.wxml-->
+
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="/pages/images/huihui.png" style= "width: 93%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+<view class= "title">家属院猫咪图鉴</view>
+
+<text> \n </text>
+<!-- 最好能保留这一行 -->
+<view class="body">   </view>
+<view class="staff" bindtap="copyTBL">提供猫咪信息或纠错请联系微信：Pao_Leo (单击可复制)</view>
+<view class="staff">此小程序代码开源，可在GitHub上搜索：北大猫协</view>
+<view class="staff">小程序维护：一只狍</view>
+<text> \n\n\n </text>
+

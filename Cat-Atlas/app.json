@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/logs/logs",
+    "pages/science/science"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FBDB6C",
+    "navigationBarTitleText": "家属院猫咪图鉴",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+
+  "sitemapLocation": "sitemap.json",
+
+  "usingComponents": {
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-share-sheet": "vant-weapp/share-sheet/index",
+    "van-notice-bar": "vant-weapp/notice-bar/index",
+    "van-search": "vant-weapp/search/index",
+    "van-toast": "vant-weapp/toast/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "l-list":"link-UI/list/index",
+    "van-sticky": "vant-weapp/sticky/index"
+  }
+
+  
+
+
+
+}
